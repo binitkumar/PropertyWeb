@@ -25,7 +25,7 @@ class PropertiesController < ApplicationController
   # POST /properties.json
   def create
     @property = Property.new(property_params)
-
+    @property.posting_local = cookies[:language]
     respond_to do |format|
       if @property.save
         format.html { redirect_to @property, notice: 'Property was successfully created.' }
@@ -40,6 +40,7 @@ class PropertiesController < ApplicationController
   # PATCH/PUT /properties/1
   # PATCH/PUT /properties/1.json
   def update
+    @property.posting_local = cookies[:language]
     respond_to do |format|
       if @property.update(property_params)
         format.html { redirect_to @property, notice: 'Property was successfully updated.' }

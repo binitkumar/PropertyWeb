@@ -227,7 +227,7 @@ a:visited,
 
 #main-top .listing-search form,
 #main-top .widget-call-to-action-wrap {
-	background: url(../wpcasa/lib/assets/img/bg-trans-light-50.png);
+	background: url(/assets/bg-trans-light-50.png);
 }
 
 #main-top .call-to-action-text {

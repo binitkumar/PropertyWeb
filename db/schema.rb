@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140702063828) do
+ActiveRecord::Schema.define(version: 20140702115134) do
 
   create_table "properties", force: true do |t|
     t.string   "title"
@@ -37,6 +37,33 @@ ActiveRecord::Schema.define(version: 20140702063828) do
     t.date     "available_from"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "posting_local"
   end
+
+  create_table "property_translations", force: true do |t|
+    t.integer  "property_id",         null: false
+    t.string   "locale",              null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.text     "short_desc"
+    t.string   "price"
+    t.string   "property_for"
+    t.string   "landmark"
+    t.string   "location"
+    t.string   "property_in"
+    t.string   "parking"
+    t.string   "flooring"
+    t.string   "furnishing"
+    t.string   "open_for_inspection"
+    t.string   "address"
+    t.string   "city"
+    t.string   "district"
+    t.string   "zipcode"
+    t.string   "available_from"
+  end
+
+  add_index "property_translations", ["locale"], name: "index_property_translations_on_locale"
+  add_index "property_translations", ["property_id"], name: "index_property_translations_on_property_id"
 
 end

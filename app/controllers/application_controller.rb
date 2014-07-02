@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
   before_filter :set_user_language
 
   def set_user_language
-    I18n.config.enforce_available_locales = false
     cookies[:language] = "zh-CN".to_sym if cookies[:language].blank?
     I18n.locale = cookies[:language] || "zh-CN".to_sym
   end

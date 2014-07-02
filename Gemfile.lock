@@ -40,6 +40,9 @@ GEM
       html2haml
     erubis (2.7.0)
     execjs (2.2.0)
+    globalize (4.0.2)
+      activemodel (>= 4.0.0, < 5)
+      activerecord (>= 4.0.0, < 5)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -136,6 +139,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   erb2haml
+  globalize (~> 4.0.2)
   haml
   haml-rails
   jbuilder (~> 2.0)
