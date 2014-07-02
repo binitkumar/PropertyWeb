@@ -37,8 +37,10 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'tzinfo-data'
 gem 'haml'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'rails-i18n', '~> 4.0.0'
 gem 'globalize', '~> 4.0.2'
+gem 'rails_autocomplete'

@@ -1,0 +1,9 @@
+/*
+*/
+
+#language span a{
+    border-radius: 6px;
+    border: 1px solid black;
+    padding: 3px;
+    color: white !important;
+}
