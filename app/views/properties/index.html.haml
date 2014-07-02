@@ -1,0 +1,393 @@
+#main-wrap.wrap
+  #main-top-wrap.wrap
+    .container
+      #main-top.clearfix
+        #wpsight-spaces-2-wrap.widget-wrap.widget-spaces-wrap.span12.first
+          #wpsight-spaces-2.widget.widget-spaces.widget-spaces-center.clearfix
+            .widget-inner
+              .space-image
+                %img.attachment-full.spaces-post-image.alignnone{:alt => "find-home", :height => "70", :src => "/assets/find-home.png", :width => "580"}/
+            / .widget-inner
+          / .widget-spaces
+        / .widget-wrap
+        #wpsight-listings-search-2.listings-search-widget.section.clearfix.clear
+          .listing-search.count-5.clearfix.clear
+            %form{:action => "#", :method => "get"}
+              .form-inner
+                .listing-search-main
+                  %input.listing-search-text.text{:name => "s", :title => "Keyword or Property ID&hellip;", :type => "text", :value => ""}/
+                  %input.listing-search-submit.btn.btn-large.btn-primary{:name => "search-submit", :type => "submit", :value => "Search"}/
+                / .listing-search-main
+                .listing-search-details
+                  .listing-search-field.listing-search-field-select.listing-search-field-status
+                    %select.listing-search-status.select{:name => "status"}
+                      %option{:value => ""} Status
+                      %option{:value => "sale"} for Sale
+                      %option{:value => "rent"} for Rent
+                    / .listing-search-status
+                  / .listing-search-field .listing-search-field-status
+                  .listing-search-field.listing-search-field-taxonomy.listing-search-field-location
+                    %select.listing-search-location.select{:name => "location"}
+                      %option{:value => ""} Location
+                      %option{:value => "alicante"} Alicante
+                      %option{:value => "barcelona"} Barcelona
+                      %option{:value => "cartagena"} Cartagena
+                      %option{:value => "costa-del-sol"} Costa del Sol
+                      %option{:value => "malaga"} -&nbsp;Málaga
+                      %option{:value => "estepona"} --&nbsp;Estepona
+                      %option{:value => "mijas"} --&nbsp;Mijas
+                      %option{:value => "nerja"} --&nbsp;Nerja
+                      %option{:value => "marbella"} -&nbsp;Marbella
+                      %option{:value => "granada"} Granada
+                      %option{:value => "madrid"} Madrid
+                      %option{:value => "valencia"} Valencia
+                    / .listing-search-location
+                  / .listing-search-field .listing-search-field-location
+                  .listing-search-field.listing-search-field-taxonomy.listing-search-field-property-type
+                    %select.listing-search-property-type.select{:name => "property-type"}
+                      %option{:value => ""} Type
+                      %option{:value => "apartment"} Apartment
+                      %option{:value => "country-house"} Country House
+                      %option{:value => "finca"} Finca
+                      %option{:value => "loft"} Loft
+                      %option{:value => "town-house"} Town House
+                      %option{:value => "villa"} Villa
+                    / .listing-search-property-type
+                  / .listing-search-field .listing-search-field-property-type
+                  .listing-search-field.listing-search-field-select.listing-search-field-details_1
+                    %select.listing-search-details_1.select{:name => "details_1"}
+                      %option{:value => ""} Bedrooms
+                      %option{:value => "1"} 1
+                      %option{:value => "2"} 2
+                      %option{:value => "3"} 3
+                      %option{:value => "4"} 4
+                      %option{:value => "5"} 5
+                    / .listing-search-details_1
+                  / .listing-search-field .listing-search-field-details_1
+                  .listing-search-field.listing-search-field-select.listing-search-field-details_2
+                    %select.listing-search-details_2.select{:name => "details_2"}
+                      %option{:value => ""} Bathrooms
+                      %option{:value => "1"} 1
+                      %option{:value => "2"} 2
+                      %option{:value => "3"} 3
+                      %option{:value => "4"} 4
+                      %option{:value => "5"} 5
+                    / .listing-search-details_2
+                  / .listing-search-field .listing-search-field-details_2
+                / .listing-search-details
+                .listing-search-advanced
+                  .listing-search-field.listing-search-field-text.listing-search-field-min
+                    %input.listing-search-min.text{:name => "min", :title => "Price (min)", :type => "text", :value => ""}/
+                  / .listing-search-field .listing-search-field-min
+                  .listing-search-field.listing-search-field-text.listing-search-field-max
+                    %input.listing-search-max.text{:name => "max", :title => "Price (max)", :type => "text", :value => ""}/
+                  / .listing-search-field .listing-search-field-max
+                  .listing-search-field.listing-search-field-radio.listing-search-field-orderby
+                    %label.radiogroup{:for => "orderby"} Order by
+                    %label.radio
+                      %input{:checked => "checked", "data-default" => "true", :name => "orderby", :type => "radio", :value => "date"}/
+                      Date
+                    %label.radio
+                      %input{"data-default" => "false", :name => "orderby", :type => "radio", :value => "price"}/
+                      Price
+                    %label.radio
+                      %input{"data-default" => "false", :name => "orderby", :type => "radio", :value => "title"}/
+                      Title
+                  / .listing-search-field .listing-search-field-orderby
+                  .listing-search-field.listing-search-field-radio.listing-search-field-order
+                    %label.radiogroup{:for => "order"} Order
+                    %label.radio
+                      %input{"data-default" => "false", :name => "order", :type => "radio", :value => "asc"}/
+                      asc
+                    %label.radio
+                      %input{:checked => "checked", "data-default" => "true", :name => "order", :type => "radio", :value => "desc"}/
+                      desc
+                  / .listing-search-field .listing-search-field-order
+                / .listing-search-advanced
+                .listing-search-buttons
+                  .listing-search-advanced-button Advanced Search
+                / .listing-search-buttons
+              / form-inner
+          / .listing-search
+      / #main-top
+    / .container
+  / #main-top-wrap
+  #main-middle-wrap.wrap
+    .container
+      #main-middle.row
+      / #main-middle
+    / .container
+  / #main-middle-wrap
+  #main-bottom-wrap.wrap
+    .container
+      #main-bottom.clearfix
+        #wpsight-latest-listings-3-wrap.widget-wrap.widget-latest-wrap
+          #wpsight-latest-listings-3.widget.widget-latest.widget-latest-listings.row
+            .title.title-widget.clearfix
+              %h2 Top Properties
+            .post-96.property.type-property.status-publish.hentry.span4.clear.clearfix
+              .widget-inner
+                .post-image.listing-image.alignnone
+                  %a{:href => "#"}
+                    %img.attachment-post-thumbnail.wp-post-image{:alt => "Unique Villa With Private Beach", :src => "/assets/property.jpg", :title => "Unique Villa With Private Beach"}/
+                / .post-image
+                %h3.post-title
+                  %a{:href => "#", :rel => "bookmark", :title => "Unique Villa With Private Beach"}
+                    Unique Villa With Private Beach
+                .listing-details-overview.clearfix
+                  %span.listing-details-1.listing-details-detail{:title => "Bedrooms"} 3
+                  / .listing-details-1
+                  %span.listing-details-2.listing-details-detail{:title => "Bathrooms"} 5
+                  / .listing-details-2
+                  %span.listing-details-3.listing-details-detail{:title => "Plot Size"} 5400 m&sup2;
+                  / .listing-details-3
+                  %span.listing-price
+                    %span.listing-price-symbol $
+                    / .listing-price-symbol
+                    %span.listing-price-value 2,490,000
+                    / .listing-price-value
+                  / .listing-price
+                / .listing-details
+                .post-teaser
+                  %p
+                    Lorem ipsum dolor sit amet, ei atqui iudicabit gloriatur usu. Usu id impetus principes, nec te populo dignissim concludaturque.
+                  .moretag-wrap
+                    %a.moretag.btn.btn-primary{:href => "#"} View details
+              / .widget-inner
+            / .post-96
+            .post-93.property.type-property.status-publish.hentry.span4.clearfix
+              .widget-inner
+                .post-image.listing-image.alignnone
+                  %a{:href => "#"}
+                    %img.attachment-post-thumbnail.wp-post-image{:alt => "Gorgeous Country House", :src => "/assets/property.jpg", :title => "Gorgeous Country House"}/
+                / .post-image
+                %h3.post-title
+                  %a{:href => "#", :rel => "bookmark", :title => "Gorgeous Country House"}
+                    Gorgeous Country House
+                .listing-details-overview.clearfix
+                  %span.listing-details-1.listing-details-detail{:title => "Bedrooms"} 3
+                  / .listing-details-1
+                  %span.listing-details-2.listing-details-detail{:title => "Bathrooms"} 3
+                  / .listing-details-2
+                  %span.listing-details-3.listing-details-detail{:title => "Plot Size"} 4900 m&sup2;
+                  / .listing-details-3
+                  %span.listing-price
+                    %span.listing-price-symbol $
+                    / .listing-price-symbol
+                    %span.listing-price-value 3,100
+                    / .listing-price-value
+                    %span.listing-rental-period / per Month
+                    / .listing-rental-period
+                  / .listing-price
+                / .listing-details
+                .post-teaser
+                  %p
+                    Te quo debet veniam nemore, eam ad hinc liber civibus. Eam ex quis clita salutatus, usu suavitate comprehensam ad, cu vim sumo.
+                  .moretag-wrap
+                    %a.moretag.btn.btn-primary{:href => "#"} View details
+              / .widget-inner
+            / .post-93
+            .post-93.property.type-property.status-publish.hentry.span4.clearfix
+              .widget-inner
+                .post-image.listing-image.alignnone
+                  %a{:href => "#"}
+                    %img.attachment-post-thumbnail.wp-post-image{:alt => "Gorgeous Country House", :src => "/assets/property.jpg", :title => "Gorgeous Country House"}/
+                / .post-image
+                %h3.post-title
+                  %a{:href => "#", :rel => "bookmark", :title => "Gorgeous Country House"}
+                    Gorgeous Country House
+                .listing-details-overview.clearfix
+                  %span.listing-details-1.listing-details-detail{:title => "Bedrooms"} 3
+                  / .listing-details-1
+                  %span.listing-details-2.listing-details-detail{:title => "Bathrooms"} 3
+                  / .listing-details-2
+                  %span.listing-details-3.listing-details-detail{:title => "Plot Size"} 4900 m&sup2;
+                  / .listing-details-3
+                  %span.listing-price
+                    %span.listing-price-symbol $
+                    / .listing-price-symbol
+                    %span.listing-price-value 3,100
+                    / .listing-price-value
+                    %span.listing-rental-period / per Month
+                    / .listing-rental-period
+                  / .listing-price
+                / .listing-details
+                .post-teaser
+                  %p
+                    Te quo debet veniam nemore, eam ad hinc liber civibus. Eam ex quis clita salutatus, usu suavitate comprehensam ad, cu vim sumo.
+                  .moretag-wrap
+                    %a.moretag.btn.btn-primary{:href => "#"} View details
+              / .widget-inner
+            / .post-93
+            .post-93.property.type-property.status-publish.hentry.span4.clearfix
+              .widget-inner
+                .post-image.listing-image.alignnone
+                  %a{:href => "#"}
+                    %img.attachment-post-thumbnail.wp-post-image{:alt => "Gorgeous Country House", :src => "/assets/property.jpg", :title => "Gorgeous Country House"}/
+                / .post-image
+                %h3.post-title
+                  %a{:href => "#", :rel => "bookmark", :title => "Gorgeous Country House"}
+                    Gorgeous Country House
+                .listing-details-overview.clearfix
+                  %span.listing-details-1.listing-details-detail{:title => "Bedrooms"} 3
+                  / .listing-details-1
+                  %span.listing-details-2.listing-details-detail{:title => "Bathrooms"} 3
+                  / .listing-details-2
+                  %span.listing-details-3.listing-details-detail{:title => "Plot Size"} 4900 m&sup2;
+                  / .listing-details-3
+                  %span.listing-price
+                    %span.listing-price-symbol $
+                    / .listing-price-symbol
+                    %span.listing-price-value 3,100
+                    / .listing-price-value
+                    %span.listing-rental-period / per Month
+                    / .listing-rental-period
+                  / .listing-price
+                / .listing-details
+                .post-teaser
+                  %p
+                    Te quo debet veniam nemore, eam ad hinc liber civibus. Eam ex quis clita salutatus, usu suavitate comprehensam ad, cu vim sumo.
+                  .moretag-wrap
+                    %a.moretag.btn.btn-primary{:href => "#"} View details
+              / .widget-inner
+            / .post-93
+            .post-93.property.type-property.status-publish.hentry.span4.clearfix
+              .widget-inner
+                .post-image.listing-image.alignnone
+                  %a{:href => "#"}
+                    %img.attachment-post-thumbnail.wp-post-image{:alt => "Gorgeous Country House", :src => "/assets/property.jpg", :title => "Gorgeous Country House"}/
+                / .post-image
+                %h3.post-title
+                  %a{:href => "#", :rel => "bookmark", :title => "Gorgeous Country House"}
+                    Gorgeous Country House
+                .listing-details-overview.clearfix
+                  %span.listing-details-1.listing-details-detail{:title => "Bedrooms"} 3
+                  / .listing-details-1
+                  %span.listing-details-2.listing-details-detail{:title => "Bathrooms"} 3
+                  / .listing-details-2
+                  %span.listing-details-3.listing-details-detail{:title => "Plot Size"} 4900 m&sup2;
+                  / .listing-details-3
+                  %span.listing-price
+                    %span.listing-price-symbol $
+                    / .listing-price-symbol
+                    %span.listing-price-value 3,100
+                    / .listing-price-value
+                    %span.listing-rental-period / per Month
+                    / .listing-rental-period
+                  / .listing-price
+                / .listing-details
+                .post-teaser
+                  %p
+                    Te quo debet veniam nemore, eam ad hinc liber civibus. Eam ex quis clita salutatus, usu suavitate comprehensam ad, cu vim sumo.
+                  .moretag-wrap
+                    %a.moretag.btn.btn-primary{:href => "#"} View details
+              / .widget-inner
+            / .post-93
+          / .widget
+        / .widget-wrap
+        #wpsight-latest-2-wrap.widget-wrap.widget-latest-wrap
+          #wpsight-latest-2.widget.widget-latest.row
+            .title.title-widget.clearfix
+              %h2 Latest News
+            .post-93.property.type-property.status-publish.hentry.span4.clearfix
+              .widget-inner
+                .post-image.listing-image.alignnone
+                  %a{:href => "#"}
+                    %img.attachment-post-thumbnail.wp-post-image{:alt => "Gorgeous Country House", :src => "/assets/property.jpg", :title => "Gorgeous Country House"}/
+                / .post-image
+                %h3.post-title
+                  %a{:href => "#", :rel => "bookmark", :title => "Gorgeous Country House"}
+                    Gorgeous Country House
+                .listing-details-overview.clearfix
+                  %span.listing-details-1.listing-details-detail{:title => "Bedrooms"} 3
+                  / .listing-details-1
+                  %span.listing-details-2.listing-details-detail{:title => "Bathrooms"} 3
+                  / .listing-details-2
+                  %span.listing-details-3.listing-details-detail{:title => "Plot Size"} 4900 m&sup2;
+                  / .listing-details-3
+                  %span.listing-price
+                    %span.listing-price-symbol $
+                    / .listing-price-symbol
+                    %span.listing-price-value 3,100
+                    / .listing-price-value
+                    %span.listing-rental-period / per Month
+                    / .listing-rental-period
+                  / .listing-price
+                / .listing-details
+                .post-teaser
+                  %p
+                    Te quo debet veniam nemore, eam ad hinc liber civibus. Eam ex quis clita salutatus, usu suavitate comprehensam ad, cu vim sumo.
+                  .moretag-wrap
+                    %a.moretag.btn.btn-primary{:href => "#"} View details
+              / .widget-inner
+            / .post-93
+            .post-93.property.type-property.status-publish.hentry.span4.clearfix
+              .widget-inner
+                .post-image.listing-image.alignnone
+                  %a{:href => "#"}
+                    %img.attachment-post-thumbnail.wp-post-image{:alt => "Gorgeous Country House", :src => "/assets/property.jpg", :title => "Gorgeous Country House"}/
+                / .post-image
+                %h3.post-title
+                  %a{:href => "#", :rel => "bookmark", :title => "Gorgeous Country House"}
+                    Gorgeous Country House
+                .listing-details-overview.clearfix
+                  %span.listing-details-1.listing-details-detail{:title => "Bedrooms"} 3
+                  / .listing-details-1
+                  %span.listing-details-2.listing-details-detail{:title => "Bathrooms"} 3
+                  / .listing-details-2
+                  %span.listing-details-3.listing-details-detail{:title => "Plot Size"} 4900 m&sup2;
+                  / .listing-details-3
+                  %span.listing-price
+                    %span.listing-price-symbol $
+                    / .listing-price-symbol
+                    %span.listing-price-value 3,100
+                    / .listing-price-value
+                    %span.listing-rental-period / per Month
+                    / .listing-rental-period
+                  / .listing-price
+                / .listing-details
+                .post-teaser
+                  %p
+                    Te quo debet veniam nemore, eam ad hinc liber civibus. Eam ex quis clita salutatus, usu suavitate comprehensam ad, cu vim sumo.
+                  .moretag-wrap
+                    %a.moretag.btn.btn-primary{:href => "#"} View details
+              / .widget-inner
+            / .post-93
+            .post-93.property.type-property.status-publish.hentry.span4.clearfix
+              .widget-inner
+                .post-image.listing-image.alignnone
+                  %a{:href => "#"}
+                    %img.attachment-post-thumbnail.wp-post-image{:alt => "Gorgeous Country House", :src => "/assets/property.jpg", :title => "Gorgeous Country House"}/
+                / .post-image
+                %h3.post-title
+                  %a{:href => "", :rel => "bookmark", :title => "Gorgeous Country House"}
+                    Gorgeous Country House
+                .listing-details-overview.clearfix
+                  %span.listing-details-1.listing-details-detail{:title => "Bedrooms"} 3
+                  / .listing-details-1
+                  %span.listing-details-2.listing-details-detail{:title => "Bathrooms"} 3
+                  / .listing-details-2
+                  %span.listing-details-3.listing-details-detail{:title => "Plot Size"} 4900 m&sup2;
+                  / .listing-details-3
+                  %span.listing-price
+                    %span.listing-price-symbol $
+                    / .listing-price-symbol
+                    %span.listing-price-value 3,100
+                    / .listing-price-value
+                    %span.listing-rental-period / per Month
+                    / .listing-rental-period
+                  / .listing-price
+                / .listing-details
+                .post-teaser
+                  %p
+                    Te quo debet veniam nemore, eam ad hinc liber civibus. Eam ex quis clita salutatus, usu suavitate comprehensam ad, cu vim sumo.
+                  .moretag-wrap
+                    %a.moretag.btn.btn-primary{:href => "#"} View details
+              / .widget-inner
+            / .post-93
+          / .widget
+        / .widget-wrap
+      / #main-bottom
+    / .container
+  / #main-bottom-wrap
+/ #main-wrap
