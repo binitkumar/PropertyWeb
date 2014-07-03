@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :properties
+  resources :properties do
+    collection do
+      get :map
+    end
+  end
   resources :users do
     member do
       get :change_language

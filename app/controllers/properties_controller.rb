@@ -1,10 +1,16 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, only: [:new, :create]
+
+  def map
+    @properties = Property.all
+  end
+
   # GET /properties
   # GET /properties.json
   def index
-    @properties = Property.all
+    @tags = [ Property.all.collect(&:title) + Property.all.collect(&:location) +
+        Property.all.collect(&:address) + Property.all.collect(&:city) ].uniq
   end
 
   # GET /properties/1
@@ -70,6 +76,10 @@ class PropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def property_params
-      params.require(:property).permit(:title, :short_desc, :price, :size, :property_for, :landmark, :location, :property_in, :total_no_of_floors, :bed_rooms, :total_rooms, :bathrooms, :parking, :flooring, :furnishing, :open_for_inspection, :address, :city, :district, :zipcode, :available_from)
+      params.require(:property).permit(:title, :short_desc, :price, :size, :property_for, :landmark,
+                                       :location, :property_in, :total_no_of_floors, :bed_rooms,
+                                       :total_rooms, :bathrooms, :parking, :flooring, :furnishing,
+                                       :open_for_inspection, :address, :city, :district, :zipcode,
+                                       :available_from, :photo)
     end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140703080425) do
+ActiveRecord::Schema.define(version: 20140703103828) do
 
   create_table "properties", force: true do |t|
     t.string   "title"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 20140703080425) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.integer  "user_id"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "property_translations", force: true do |t|

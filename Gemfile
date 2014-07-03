@@ -48,3 +48,4 @@ gem 'rails_autocomplete'
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'html5_validators'
 gem 'devise'
+gem "geocoder"
