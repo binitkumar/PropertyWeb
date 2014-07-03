@@ -20,6 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  label:
+    email: Email
   layout:
     title: Property Web
     expert_advise: Need expert advice? Call us now

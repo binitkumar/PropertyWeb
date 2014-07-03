@@ -8,3 +8,9 @@
     padding: 3px;
     color: white !important;
 }
+
+.notice{
+    color:red;
+    font-weight:bold;
+    padding: 8px
+}

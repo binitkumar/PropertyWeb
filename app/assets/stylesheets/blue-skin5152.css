@@ -3,7 +3,7 @@
 /* ------------------------------------------------------------------------------------------------------------------ */
 /* Header ---------------------------------------------------------------------------------------------------------*/
 .header-wrapper {
-  background-color: #6392C6;
+  background-color: black;
 }
 
 span.tag-line {
@@ -15,7 +15,7 @@ span.tag-line {
 }
 
 .main-nav .sub-menu li {
-  background-color: #4A7AAF;
+  background-color: black;
 }
 .main-nav .sub-menu li:hover {
   background-color: #3b618b;
