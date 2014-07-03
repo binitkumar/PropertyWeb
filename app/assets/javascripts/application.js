@@ -12,6 +12,7 @@
 //
 //= require jquerya4e6
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require turbolinks
 //= require jquery-migrate.min1576
 //= require jquery.easing.1.34e44

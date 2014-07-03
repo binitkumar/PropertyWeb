@@ -1,10 +1,40 @@
+:javascript
+  jQuery(function() {
+    var availableTags = [
+    "ActionScript",
+    "AppleScript",
+    "Asp",
+    "BASIC",
+    "C",
+    "C++",
+    "Clojure",
+    "COBOL",
+    "ColdFusion",
+    "Erlang",
+    "Fortran",
+    "Groovy",
+    "Haskell",
+    "Java",
+    "JavaScript",
+    "Lisp",
+    "Perl",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Scala",
+    "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  });
 / Start of Search Wrapper
 .search-area-wrapper
   .search-area.container
     %h3.search-header Search Property
     /%p.search-tag-line If you have any question you can ask below or enter what you are looking for!
     %form#search-form.search-form.clearfix{:action => "#", :autocomplete => "off", :method => "get"}
-      %input#s.search-term.required{:name => "s", :placeholder => "Search by city or address", :title => "* Please enter a search term!", :type => "text"}/
+      %input#tags.search-term.required{:name => "s", :placeholder => "Search by city or address", :title => "* Please enter a search term!", :type => "text"}/
       %input.search-btn{:type => "submit", :value => "Search"}/
       #search-error-container
     .container
