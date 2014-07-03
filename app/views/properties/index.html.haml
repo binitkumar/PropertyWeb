@@ -3,8 +3,7 @@
   .search-area.container
     %h3.search-header Search Property
     /%p.search-tag-line If you have any question you can ask below or enter what you are looking for!
-    = form_tag "#"
-      /%form#search-form.search-form.clearfix{:action => "#", :autocomplete => "off", :method => "get"}
+    %form#search-form.search-form.clearfix{:action => "#", :autocomplete => "off", :method => "get"}
       %input#s.search-term.required{:name => "s", :placeholder => "Search by city or address", :title => "* Please enter a search term!", :type => "text"}/
       %input.search-btn{:type => "submit", :value => "Search"}/
       #search-error-container

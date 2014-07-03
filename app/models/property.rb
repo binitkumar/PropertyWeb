@@ -4,6 +4,13 @@ class Property < ActiveRecord::Base
 
   after_save :update_translations
 
+  has_attached_file :photo
+  validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
+
+  include ActiveModel::Validations
+  validates_presence_of :title, :short_desc, :price, :property_for, :landmark, :location, :address, :city, :district, :zipcode
+
+  belongs_to :user
   def update_translations
     source_locale = self.posting_local
     dest_locale   = ( ["en", "zh-CN"] - [ source_locale ] ).first

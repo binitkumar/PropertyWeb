@@ -5,69 +5,73 @@
       %ul
         - @property.errors.full_messages.each do |msg|
           %li= msg
-
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :short_desc
-    = f.text_area :short_desc
-  .field
-    = f.label :price
-    = f.text_field :price
-  .field
-    = f.label :size
-    = f.number_field :size
-  .field
-    = f.label :property_for
-    = f.text_field :property_for
-  .field
-    = f.label :landmark
-    = f.text_field :landmark
-  .field
-    = f.label :location
-    = f.text_field :location
-  .field
-    = f.label :property_in
-    = f.text_field :property_in
-  .field
-    = f.label :total_no_of_floors
-    = f.text_field :total_no_of_floors
-  .field
-    = f.label :bed_rooms
-    = f.number_field :bed_rooms
-  .field
-    = f.label :total_rooms
-    = f.number_field :total_rooms
-  .field
-    = f.label :bathrooms
-    = f.number_field :bathrooms
-  .field
-    = f.label :parking
-    = f.text_field :parking
-  .field
-    = f.label :flooring
-    = f.text_field :flooring
-  .field
-    = f.label :furnishing
-    = f.text_field :furnishing
-  .field
-    = f.label :open_for_inspection
-    = f.text_field :open_for_inspection
-  .field
-    = f.label :address
-    = f.text_field :address
-  .field
-    = f.label :city
-    = f.text_field :city
-  .field
-    = f.label :district
-    = f.text_field :district
-  .field
-    = f.label :zipcode
-    = f.text_field :zipcode
-  .field
-    = f.label :available_from
-    = f.date_select :available_from
+  .span6
+    .field.form-group
+      = f.label :title
+      = f.text_field :title, class: "input-block-level"
+    .field
+      = f.label :short_desc
+      = f.text_area :short_desc, class: "input-block-level"
+    .field
+      = f.label :price
+      = f.text_field :price, class: "input-block-level"
+    .field
+      = f.label :photo
+      = f.file_field :photo, class: "input-block-level"
+    .field
+      = f.label :size
+      = f.number_field :size, class: "input-block-level"
+    .field
+      = f.label :property_for
+      = f.text_field :property_for, class: "input-block-level"
+    .field
+      = f.label :landmark
+      = f.text_field :landmark, class: "input-block-level"
+    .field
+      = f.label :location
+      = f.text_field :location, class: "input-block-level"
+    .field
+      = f.label :property_in
+      = f.text_field :property_in, class: "input-block-level"
+    .field
+      = f.label :total_no_of_floors
+      = f.text_field :total_no_of_floors, class: "input-block-level"
+    .field
+      = f.label :bed_rooms
+      = f.number_field :bed_rooms, class: "input-block-level"
+  .span5
+    .field
+      = f.label :total_rooms
+      = f.number_field :total_rooms, class: "input-block-level"
+    .field
+      = f.label :bathrooms
+      = f.number_field :bathrooms, class: "input-block-level"
+    .field
+      = f.label :parking
+      = f.text_field :parking, class: "input-block-level"
+    .field
+      = f.label :flooring
+      = f.text_field :flooring, class: "input-block-level"
+    .field
+      = f.label :furnishing
+      = f.text_field :furnishing, class: "input-block-level"
+    .field
+      = f.label :open_for_inspection
+      = f.text_field :open_for_inspection, class: "input-block-level"
+    .field
+      = f.label :address
+      = f.text_field :address, class: "input-block-level"
+    .field
+      = f.label :city
+      = f.text_field :city, class: "input-block-level"
+    .field
+      = f.label :district
+      = f.text_field :district, class: "input-block-level"
+    .field
+      = f.label :zipcode
+      = f.text_field :zipcode   , class: "input-block-level"
+    .field
+      = f.label :available_from
+      = f.date_select :available_from
   .actions
     = f.submit 'Save', class: 'btn btn-large btn-primary'

@@ -97,11 +97,11 @@
               /    %li#menu-item-264.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-264
               /      %a{:href => "sample-page/index.html"} Sample Page
               %li#menu-item-271.menu-item
-                %a{:href => "#"}= t('layout.post_your_property')
+                %a{:href => new_property_path }= t('layout.post_your_property')
               %li#menu-item-272.menu-item
-                %a{:href => "#"}= t('layout.sign_up')
+                %a{:href => new_user_registration_path }= t('layout.sign_up')
               %li#menu-item-275.menu-item
-                %a{:href => "#"}= t('layout.login')
+                %a{:href => new_user_session_path}= t('layout.login')
         / End of Main Navigation
     / End of Header
     #language.pull-right.white

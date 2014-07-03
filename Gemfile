@@ -44,3 +44,6 @@ gem 'erb2haml'
 gem 'rails-i18n', '~> 4.0.0'
 gem 'globalize', '~> 4.0.2'
 gem 'rails_autocomplete'
+gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'html5_validators'
+gem 'devise'
